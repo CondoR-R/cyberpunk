@@ -1,0 +1,86 @@
+.hp
+    @include paddings
+    background: $color-yellow url('../img/black-to-yellow.png') top / auto 7rem repeat-x
+    padding-top: 14rem
+    @include respond(1440)
+        @include paddings-1440
+    @include respond(800)
+        @include paddings-800
+    @include respond(600)
+        @include paddings-600
+    &__content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 3.2rem
+        margin-bottom: 7rem
+        @include respond(800)
+            display: block
+    // левая часть
+    &__left
+        align-self: center
+    &__screen
+        display: block
+        width: 62.4rem
+        height: 43rem
+        margin-bottom: 2.6rem
+        @include respond(1440)
+            width: 46rem
+            height: 31.7rem
+        @include respond(800)
+            width: 100%
+            height: auto
+            margin-bottom: 3rem
+    &__logos
+        display: flex
+        justify-content: space-around
+        @include respond(1440)
+            flex-direction: column
+            align-items: center
+            height: 23rem
+            justify-content: space-between
+        @include respond(800)
+            flex-direction: row
+            height: auto
+            margin-bottom: 5rem
+        @include respond(600)
+            flex-direction: column
+            height: 23rem
+    &__img-hp
+        width: 8rem
+        height: 8rem
+    // крестик
+    &__line
+        position: relative
+        width: 10rem
+        &::before, &::after
+            content: ''
+            width: 9rem
+            border-bottom: .1rem $color-black solid
+            display: inline-block
+        &::before
+            transform: rotate(-20deg) translate(-13%, 2.8rem)
+            @include respond(1440)
+                transform: rotate(-20deg) translate(-5%, 0.8rem)
+        &::after
+            transform: rotate(20deg) translate(6.5%, 1.8rem)
+            @include respond(1440)
+                transform: rotate(20deg) translate(0.5%, -0.2rem)
+    // правая часть
+    &__title
+        margin-bottom: 2.5rem
+    &__paragraph
+        margin-bottom: 2.5rem
+        &_li
+            margin-bottom: 0
+            display: grid
+            grid-template-columns: max-content 31.25rem
+            & span
+                grid-column: 2 / 3
+    &__li
+        margin-bottom: 1.5rem
+        &:last-child
+            margin-bottom: 4rem
+    &__icon
+        width: 3.2rem
+        height: 3.2rem
+        grid-column: 1 / 2

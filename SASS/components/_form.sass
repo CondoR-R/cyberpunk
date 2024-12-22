@@ -1,0 +1,60 @@
+.form
+    width: 46rem
+    position: relative
+    @include respond(800)
+        width: 100%
+    // текстовые инпуты
+    &__input
+        width: 100%
+        border-bottom: .1rem $color-grey solid
+        font-size: 1.8rem
+        color: $color-white
+        margin-bottom: 3.5rem
+    // поле прикрепления файла
+    &__file
+        display: none
+    &__label-file
+        width: 100%
+        border: .1rem $color-grey dashed
+        padding: 4rem 13.7rem
+        display: inline-block
+        text-align: center
+        margin-bottom: 3.5rem
+    // кнопка
+    &__btn
+        margin-bottom: 1.5rem
+    // checkbox обработка данных
+        // делаем оригинальный чекбокс невидимым на том же месте
+    &__checkbox
+        position: absolute
+        opacity: 0
+        z-index: -1
+        // отображение галочки при выборе
+        &:checked+.form__label-checkbox::before
+            background: url('../icons/check-mark.svg') center / 100% 100% no-repeat
+    // текст после чекбокса
+    &__label-checkbox
+        color: $color-white
+        font-size: 1.2rem
+        font-weight: 100
+        // поле для голочки
+        &::before
+            content: ''
+            display: inline-block
+            border: .1rem $color-grey solid
+            width: 1.4rem
+            height: 1.4rem
+            margin-right: 0.5em
+            transform: translateY(.3rem)
+// текст внутри поля для файлов
+.label-file__span
+    color: $color-white
+    display: inline-block
+    font-weight: 100
+    &-1
+        font-size: 1.8rem
+        // border-bottom: .1rem $color-white solid
+        text-decoration: underline
+        margin-bottom: 0.7rem
+    &-2
+        font-size: 1.2rem

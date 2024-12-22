@@ -1,0 +1,21 @@
+.about
+    @include paddings
+    padding-top: 7rem
+    @include respond(1440)
+        @include paddings-1440
+    @include respond(800)
+        @include paddings-800
+    @include respond(600)
+        @include paddings-600
+        padding-top: 15rem
+    &__content
+        overflow: visible
+    &__title
+        margin-bottom: 1rem
+    &__paragraph
+        margin-bottom: 7rem
+        width: 95.2rem
+        @include respond(800)
+            width: 100%
+    &__images
+        margin-bottom: 7rem

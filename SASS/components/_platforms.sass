@@ -1,0 +1,12 @@
+.platforms
+    display: grid
+    grid-template-columns: 6.5rem 18rem
+    grid-template-rows: 3.52rem 5.03rem
+    row-gap: 5rem
+    column-gap: 8rem
+    @include respond(800)
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        column-gap: 0
+    @include respond(600)
+        grid-template-columns: 1fr 2fr

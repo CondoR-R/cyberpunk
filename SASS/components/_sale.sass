@@ -1,0 +1,17 @@
+.sale
+    background: url('../icons/sale.svg') center / cover no-repeat
+    width: 13.2rem
+    height: 13.2rem
+    position: relative
+    display: inline-block
+    &__span
+        font-size: 3rem
+        color: $color-yellow
+        position: absolute
+        top: 36%
+        left: 18%
+        transform: rotate(-45deg)
+    &:hover
+        animation-name: spin
+        animation-duration: 3s
+        animation-timing-function: ease-in-out

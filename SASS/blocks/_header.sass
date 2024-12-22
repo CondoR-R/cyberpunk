@@ -1,0 +1,44 @@
+.header
+    @include paddings
+    padding-top: 2rem
+    height: 100rem
+    @include respond(1440)
+        @include paddings-1440
+    @include respond(800)
+        @include paddings-800
+    @include respond(600)
+        @include paddings-600
+        
+    &__bg
+        opacity: 0
+        transition: all 1s
+        &-1
+            background: url('https://live.verstaem.online/cyberpunk/img/bg-1.jpg') center / cover no-repeat
+        &-2
+            background: url('https://live.verstaem.online/cyberpunk/img/bg-2.jpg') center / cover no-repeat
+        &-3
+            background: url('https://live.verstaem.online/cyberpunk/img/bg-3.jpg') center / cover no-repeat
+    &__bg.active
+        opacity: 1
+    &__content
+        // выравнивание по высоте самого блока
+        align-self: start
+        // выравнивание элементов
+        display: flex
+        justify-content: space-between
+        align-items: center
+        overflow: visible
+        @include respond(800)
+            flex-direction: column
+            height: 15rem
+        &_for-yellow-block
+            position: relative
+            overflow: visible
+            @include respond(400)
+                grid-column: 1 / -1
+    &__yellow-block
+        position: absolute
+        bottom: 0
+        right: 0
+        @include respond(600)
+            bottom: -6.25rem

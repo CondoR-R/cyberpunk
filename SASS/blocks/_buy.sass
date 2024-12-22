@@ -1,0 +1,41 @@
+.buy
+    display: grid
+    grid-template-columns: 1fr repeat(6, 13rem) 1fr
+    column-gap: 3.2rem
+    background-color: $color-black
+    @include respond(800)
+        grid-template-columns: 1fr 55rem 1fr
+        grid-template-rows: 1fr 3fr
+    @include respond(600)
+        grid-template-columns: 1fr 92.5% 1fr
+        grid-template-rows: 1fr 3fr
+        column-gap: 0
+    &__bg
+        grid-column: 1 / 5
+        background: url('../img/buy-bg.png') center / cover no-repeat
+        @include respond(1440)
+            grid-column: 1 / 4
+        @include respond(800)
+            grid-column: 1 / 4
+            grid-row: 1 / 2
+    &__content
+        grid-column: 5 / 8
+        @include respond(1440)
+            grid-column: 4 / 8
+        @include respond(800)
+            grid-column: 2 / 3
+            grid-row: 2 / 3
+        padding-top: 7rem
+    &__title
+        margin-bottom: 2.5rem
+    &__title-third
+        margin-bottom: 1.5rem
+        &-2
+            margin-bottom: 2.5rem
+    &__ul
+        margin-bottom: 7rem
+    &__li:not(:last-child)
+        margin-bottom: 1.5rem
+    &__platforms
+        margin-bottom: 7rem
+

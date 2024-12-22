@@ -1,0 +1,48 @@
+.footer
+    @include paddings
+    padding-top: 1.5rem
+    @include respond(1440)
+        @include paddings-1440
+    @include respond(800)
+        @include paddings-800
+    @include respond(600)
+        @include paddings-600
+    &__white
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 1.5rem
+        @include respond(800)
+            flex-direction: column
+            margin-bottom: 3rem
+    &__logos
+        width: 50rem
+        display: flex
+        justify-content: space-between
+        @include respond(1000)
+            flex-direction: column
+            align-items: center
+        @include respond(800)
+            margin-bottom: 3rem
+    &__cd-logo
+        width: 17.2rem
+        height: 7.4rem
+    &__text
+        width: 40rem
+        display: flex
+        justify-content: space-between
+        @include respond(1000)
+            flex-direction: column
+            align-items: center
+            align-content: space-between
+        @include respond(800)
+            height: 6.5rem
+    &__link
+        &:link, &:visited
+            color: $color-black
+            font-size: 1.8rem
+    &__black
+        background-color: $color-black
+        grid-column: 1 / 4
+        text-align: center
+        padding: 1.5rem 0

@@ -1,0 +1,46 @@
+// Отступы для контент части
+// более 1440px
+@mixin paddings
+    display: grid
+    grid-template-columns: 1fr [content-start] 128rem [content-end] 1fr
+// <= 1140px
+@mixin paddings-1440
+    grid-template-columns: 1fr [content-start] 95rem [content-end] 1fr
+// <= 800
+@mixin paddings-800
+    grid-template-columns: 1fr [content-start] 75% [content-end] 1fr
+// <= 600
+@mixin paddings-600
+    grid-template-columns: 1fr [content-start] 92.5% [content-end] 1fr
+
+
+// Прямоугольник с срезанными углами
+@mixin clip-path-rectangle
+    clip-path: polygon(5rem 0, 100% 0, 100% calc(100% - 5rem), calc(100% - 5rem) 100%, 0 100%, 0 5rem)
+
+// Медиа
+@mixin respond($breakpoint) 
+    @if $breakpoint == 400 
+            @media only screen and (max-width: 400px) 
+                @content
+    @if $breakpoint == 600 
+        @media only screen and (max-width: 600px) 
+            @content
+    @if $breakpoint == 800 
+        @media only screen and (max-width: 800px) 
+            @content
+    @if $breakpoint == 1000 
+        @media only screen and (max-width: 1000px) 
+            @content
+    @if $breakpoint == 1440 
+        @media only screen and (max-width: 1440px) 
+            @content
+
+// @include respond(1440) 
+
+// @include respond(1000)
+
+// @include respond(800) 
+
+// @include respond(600)
+
